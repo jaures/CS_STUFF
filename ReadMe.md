@@ -6,7 +6,27 @@ So you've just finished your arduino hardware and you want to make it able to em
 ### Installing PySerial
 
 First thing we need to do is make sure we have pySerial install on the computer so our program
-can talk with our arduino
+can talk with our arduino. To get pySerial, we need to make sure our system has pip installed.
+To test it, try the following command in your command line:
+
+```
+pip install pySerial
+```
+
+If you get an output like below, that means we need to [install pip](https://bootstrap.pypa.io/get-pip.py) as well.
+After downloading it, navigate to the folder its located in, and run the following command in your command line:
+
+```
+python get-pip.py
+```
+
+After pip in ready, lets try installing pySerial again.
+
+
+![alt text](https://github.com/jaures/CS_STUFF/raw/master/nopip.JPG "Check For Pip")
+
+To install pip, go ahead and try to intall pySerial again.
+
 
 ![alt text](https://github.com/jaures/CS_STUFF/raw/master/installSerial.JPG "Install PySerial")
 
