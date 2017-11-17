@@ -3,13 +3,17 @@ import time     # Needed for sleep function
 import smtplib  # Needed for emailing
 #import imaplib  # Needed for emailing (receiving)
 
+/* MODFIY THIS SECTION */
 usr = "cs101f17@gmail.com"      # Your Username
 psw = "learning4lyfe"           # Your Password
 rcp = "jauresade@gmail.com"     # The recipient
 msg = "Someone is too close!"   # The Message to Send
+com = "COM10"                   # The Com your Arduino Is on
+/* END OF MODIFY SECTION */
+
 msg_sent = 1
 
-ser = serial.Serial('COM3', 9600, timeout=1)
+ser = serial.Serial(com, 9600, timeout=1)
 while 1:
     try:
         # Read the Distance from Serial as an int
