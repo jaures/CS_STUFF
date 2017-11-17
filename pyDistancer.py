@@ -1,15 +1,17 @@
+#! /bin/env python
+
 import serial   # Needed for serial Communication
 import time     # Needed for sleep function
 import smtplib  # Needed for emailing
 #import imaplib  # Needed for emailing (receiving)
 
-/* MODFIY THIS SECTION */
+## MODFIY THIS SECTION ##
 usr = "cs101f17@gmail.com"      # Your Username
 psw = "learning4lyfe"           # Your Password
 rcp = "jauresade@gmail.com"     # The recipient
 msg = "Someone is too close!"   # The Message to Send
 com = "COM10"                   # The Com your Arduino Is on
-/* END OF MODIFY SECTION */
+## END OF MODIFY SECTION ##
 
 msg_sent = 1
 
@@ -19,7 +21,7 @@ while 1:
         # Read the Distance from Serial as an int
         distance = int(ser.readline());
         print(distance)
-        if(distance < 10) and msg_sent is 0:
+        if(distance > 5) and msg_sent is 0:
             server = smtplib.SMTP_SSL("smtp.gmail.com",465)
             server.login(usr, psw)
             server.sendmail(usr, rcp, msg)
